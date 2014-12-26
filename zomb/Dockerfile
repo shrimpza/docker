@@ -2,6 +2,8 @@
 # ZOMB
 #
 
+MAINTAINER shrimpza
+
 # Pull base image.
 FROM debian:java8
 
