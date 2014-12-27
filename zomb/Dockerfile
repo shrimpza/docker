@@ -2,10 +2,10 @@
 # ZOMB
 #
 
-MAINTAINER shrimpza
-
 # Pull base image.
 FROM debian:java8
+
+MAINTAINER shrimpza
 
 # Install requirements
 RUN \
@@ -18,9 +18,9 @@ VOLUME ["/var/zomb/apps"]
 # Define working directory.
 WORKDIR /opt/zomb
 
-# Port 8080
-EXPOSE 8080
+# API Ports
+EXPOSE 8080 8081
 
 # Define default command.
-ENTRYPOINT ["java","-jar","/opt/zomb/zomb.jar","8080","/var/zomb/apps"]
+ENTRYPOINT ["java","-jar","/opt/zomb/zomb.jar","8080","8081","/var/zomb/apps"]
 

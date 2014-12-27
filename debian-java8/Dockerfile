@@ -2,10 +2,10 @@
 # OpenJDK Java 8 JRE on Debian Dockerfile
 #
 
-MAINTAINER shrimpza
-
 # Pull base image.
 FROM debian:sid
+
+MAINTAINER shrimpza
 
 # Install Java.
 RUN \
